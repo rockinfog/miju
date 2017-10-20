@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AowenPlatform.Cars
 {
-    public interface ICarAppService : IAsyncCrudAppService<CarDto, long, PagedResultRequestDto, CreateCarDto, CarDto>
+    public interface ICarAppService : IAsyncCrudAppService<CarDto, int, PagedResultRequestDto, CreateCarDto, CarDto>
     {
 
     }

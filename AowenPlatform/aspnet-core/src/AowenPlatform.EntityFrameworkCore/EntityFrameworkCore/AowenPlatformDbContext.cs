@@ -1,6 +1,7 @@
 ﻿using Abp.Zero.EntityFrameworkCore;
 using AowenPlatform.Authorization.Roles;
 using AowenPlatform.Authorization.Users;
+using AowenPlatform.Cars;
 using AowenPlatform.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,5 +16,10 @@ namespace AowenPlatform.EntityFrameworkCore
         {
 
         }
+
+
+        public virtual DbSet<Car> Cars { get; set; }
+
+
     }
 }

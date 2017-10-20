@@ -7,7 +7,7 @@ using System.Text;
 namespace AowenPlatform.Cars.Dto
 {
     [AutoMapFrom(typeof(Car))]
-    public class CarDto : EntityDto<long>
+    public class CarDto : EntityDto<int>
     {
         /// <summary>
         /// 车型名称
