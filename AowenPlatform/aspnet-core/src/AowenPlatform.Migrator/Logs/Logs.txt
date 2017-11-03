@@ -1,0 +1,104 @@
+﻿DEBUG 2017-11-03 13:30:17,896 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-03 13:30:18,338 [2    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2017-11-03 13:30:18,958 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.Migrator.AowenPlatformMigratorModule, AowenPlatform.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,964 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.EntityFrameworkCore.AowenPlatformEntityFrameworkModule, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,965 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.AowenPlatformCoreModule, AowenPlatform.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,969 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,969 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,970 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,970 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,971 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,972 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:18,977 [2    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2017-11-03 13:30:19,672 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: AowenPlatform.EntityFrameworkCore.AowenPlatformDbContext, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:30:20,696 [2    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-11-03 13:30:20,727 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-03 13:30:20,738 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-03 13:30:20,749 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AowenPlatform
+INFO  2017-11-03 13:30:20,994 [2    ] AowenPlatform.Migrator.Log               - Host database: Server=localhost; Database=AowenPlatformDb; Trusted_Connection=True;
+INFO  2017-11-03 13:30:20,994 [2    ] AowenPlatform.Migrator.Log               - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2017-11-03 13:30:29,310 [2    ] AowenPlatform.Migrator.Log               - HOST database migration started...
+INFO  2017-11-03 13:30:29,426 [2    ] AowenPlatform.Migrator.Log               - An error occured during migration of host database:
+INFO  2017-11-03 13:30:29,523 [2    ] AowenPlatform.Migrator.Log               - System.InvalidOperationException: Option 'trusted_connection' not supported.
+   at MySql.Data.MySqlClient.MySqlConnectionStringOption.GetOptionForKey(String key)
+   at MySql.Data.MySqlClient.MySqlConnectionStringBuilder.set_Item(String key, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.MySqlDbContextOptionsExtensions.UseMySql(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 mySqlOptionsAction)
+   at Microsoft.EntityFrameworkCore.MySqlDbContextOptionsExtensions.UseMySql[TContext](DbContextOptionsBuilder`1 optionsBuilder, String connectionString, Action`1 mySqlOptionsAction)
+   at AowenPlatform.EntityFrameworkCore.AowenPlatformDbContextConfigurer.Configure(DbContextOptionsBuilder`1 builder, String connectionString) in G:\GIT-rockinfog\miju\AowenPlatform\aspnet-core\src\AowenPlatform.EntityFrameworkCore\EntityFrameworkCore\AowenPlatformDbContextConfigurer.cs:line 11
+   at AowenPlatform.EntityFrameworkCore.AowenPlatformEntityFrameworkModule.<>c.<PreInitialize>b__8_0(AbpDbContextConfiguration`1 options) in G:\GIT-rockinfog\miju\AowenPlatform\aspnet-core\src\AowenPlatform.EntityFrameworkCore\EntityFrameworkCore\AowenPlatformEntityFrameworkModule.cs:line 31
+   at Abp.EntityFrameworkCore.DefaultDbContextResolver.CreateOptions[TDbContext](String connectionString, DbConnection existingConnection) in D:\Github\aspnetboilerplate\src\Abp.EntityFrameworkCore\EntityFrameworkCore\DefaultDbContextResolver.cs:line 64
+   at Abp.EntityFrameworkCore.DefaultDbContextResolver.Resolve[TDbContext](String connectionString, DbConnection existingConnection) in D:\Github\aspnetboilerplate\src\Abp.EntityFrameworkCore\EntityFrameworkCore\DefaultDbContextResolver.cs:line 35
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in D:\Github\aspnetboilerplate\src\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 71
+   at AowenPlatform.Migrator.MultiTenantMigrateExecuter.Run(Boolean skipConnVerification) in G:\GIT-rockinfog\miju\AowenPlatform\aspnet-core\src\AowenPlatform.Migrator\MultiTenantMigrateExecuter.cs:line 64
+INFO  2017-11-03 13:30:29,523 [2    ] AowenPlatform.Migrator.Log               - Canceled migrations.
+DEBUG 2017-11-03 13:31:50,760 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-03 13:31:50,862 [2    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2017-11-03 13:31:51,224 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.Migrator.AowenPlatformMigratorModule, AowenPlatform.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,228 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.EntityFrameworkCore.AowenPlatformEntityFrameworkModule, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,229 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.AowenPlatformCoreModule, AowenPlatform.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,229 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,229 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,230 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,230 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,231 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,231 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:51,235 [2    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2017-11-03 13:31:51,662 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: AowenPlatform.EntityFrameworkCore.AowenPlatformDbContext, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:31:52,385 [2    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-11-03 13:31:52,402 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-03 13:31:52,411 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-03 13:31:52,420 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AowenPlatform
+INFO  2017-11-03 13:31:52,616 [2    ] AowenPlatform.Migrator.Log               - Host database: server=192.168.1.22;database=AowenPlatformDb;user=root;password=123456;
+INFO  2017-11-03 13:31:52,616 [2    ] AowenPlatform.Migrator.Log               - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2017-11-03 13:31:57,723 [2    ] AowenPlatform.Migrator.Log               - HOST database migration started...
+INFO  2017-11-03 13:32:02,961 [2    ] AowenPlatform.Migrator.Log               - HOST database migration completed.
+INFO  2017-11-03 13:32:02,961 [2    ] AowenPlatform.Migrator.Log               - --------------------------------------------------------
+INFO  2017-11-03 13:32:03,402 [2    ] AowenPlatform.Migrator.Log               - All databases have been migrated.
+DEBUG 2017-11-03 13:32:06,675 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-11-03 13:32:06,675 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-11-03 13:35:28,575 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-03 13:35:28,701 [2    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2017-11-03 13:35:28,974 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.Migrator.AowenPlatformMigratorModule, AowenPlatform.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,977 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.EntityFrameworkCore.AowenPlatformEntityFrameworkModule, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,977 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.AowenPlatformCoreModule, AowenPlatform.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,978 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,978 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,978 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,979 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,979 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,979 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:28,983 [2    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2017-11-03 13:35:29,431 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: AowenPlatform.EntityFrameworkCore.AowenPlatformDbContext, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:35:30,203 [2    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-11-03 13:35:30,215 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-03 13:35:30,221 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-03 13:35:30,229 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AowenPlatform
+INFO  2017-11-03 13:35:30,418 [2    ] AowenPlatform.Migrator.Log               - Host database: server=192.168.1.22;database=AowenPlatformDb;user=root;password=123456;
+INFO  2017-11-03 13:35:30,418 [2    ] AowenPlatform.Migrator.Log               - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2017-11-03 13:35:33,785 [2    ] AowenPlatform.Migrator.Log               - HOST database migration started...
+DEBUG 2017-11-03 13:51:36,829 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-03 13:51:36,974 [2    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2017-11-03 13:51:37,205 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.Migrator.AowenPlatformMigratorModule, AowenPlatform.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,209 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.EntityFrameworkCore.AowenPlatformEntityFrameworkModule, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,209 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: AowenPlatform.AowenPlatformCoreModule, AowenPlatform.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,209 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,209 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,210 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,210 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,211 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,211 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:37,214 [2    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2017-11-03 13:51:37,649 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: AowenPlatform.EntityFrameworkCore.AowenPlatformDbContext, AowenPlatform.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-03 13:51:38,363 [2    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2017-11-03 13:51:38,375 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-03 13:51:38,378 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-03 13:51:38,384 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AowenPlatform
+INFO  2017-11-03 13:51:38,606 [2    ] AowenPlatform.Migrator.Log               - Host database: server=192.168.1.22;database=AowenPlatformDb;user=root;password=123456;
+INFO  2017-11-03 13:51:38,606 [2    ] AowenPlatform.Migrator.Log               - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2017-11-03 13:51:41,529 [2    ] AowenPlatform.Migrator.Log               - HOST database migration started...
+INFO  2017-11-03 13:51:58,588 [2    ] AowenPlatform.Migrator.Log               - HOST database migration completed.
+INFO  2017-11-03 13:51:58,588 [2    ] AowenPlatform.Migrator.Log               - --------------------------------------------------------
+INFO  2017-11-03 13:51:58,655 [2    ] AowenPlatform.Migrator.Log               - All databases have been migrated.
+DEBUG 2017-11-03 13:52:03,104 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-11-03 13:52:03,105 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.

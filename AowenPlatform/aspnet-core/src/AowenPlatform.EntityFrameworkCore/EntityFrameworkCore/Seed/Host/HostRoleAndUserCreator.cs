@@ -92,6 +92,28 @@ namespace AowenPlatform.EntityFrameworkCore.Seed.Host
 
                 _context.SaveChanges();
             }
+            else  //补充新添加的Permission到Admin用户
+            {
+                var existPermissions = _context.Permissions.Select(p => p.Name);
+                var permissions = PermissionFinder
+                   .GetAllPermissions(new AowenPlatformAuthorizationProvider())
+                   .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Host)
+                   && !existPermissions.Contains(p.Name))
+                   .ToList();
+                foreach (var permission in permissions)
+                {
+                    _context.Permissions.Add(
+                        new RolePermissionSetting
+                        {
+                            TenantId = null,
+                            Name = permission.Name,
+                            IsGranted = true,
+                            RoleId = adminRoleForHost.Id
+                        });
+                }
+                _context.SaveChanges();
+
+            }
         }
     }
 }

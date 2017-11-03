@@ -25,6 +25,9 @@ import { EditRoleComponent } from './roles/edit-role/edit-role.component';
 import { TenantsComponent } from '@app/tenants/tenants.component';
 import { CreateTenantComponent } from './tenants/create-tenant/create-tenant.component';
 import { EditTenantComponent } from './tenants/edit-tenant/edit-tenant.component';
+import { CarsComponent } from '@app/cars/cars.component';
+import { CreateCarComponent } from './cars/create-car/create-car.component';
+import { EditCarComponent } from './cars/edit-car/edit-car.component';
 import { TopBarComponent } from '@app/layout/topbar.component';
 import { TopBarLanguageSwitchComponent } from '@app/layout/topbar-languageswitch.component';
 import { SideBarUserAreaComponent } from '@app/layout/sidebar-user-area.component';
@@ -40,7 +43,10 @@ import { MaterialInput } from '@shared/directives/material-input.directive';
         AboutComponent,
         TenantsComponent,
 		CreateTenantComponent,
-		EditTenantComponent,
+        EditTenantComponent,
+        CarsComponent,
+		CreateCarComponent,
+		EditCarComponent,
         UsersComponent,
 		CreateUserComponent,
 		EditUserComponent,

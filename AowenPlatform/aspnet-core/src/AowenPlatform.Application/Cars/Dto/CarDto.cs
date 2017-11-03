@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AowenPlatform.Cars.Dto
 {
-    [AutoMapFrom(typeof(Car))]
+    [AutoMapFrom(typeof(Car)), AutoMapTo(typeof(Car))]
     public class CarDto : EntityDto<int>
     {
         /// <summary>
